@@ -28,6 +28,7 @@ function getWeather(position) {
             let description = "Clear skies";
             if (weatherCode > 0 && weatherCode <= 3) description = "Partly Cloudy";
             else if (weatherCode >= 45 && weatherCode <= 48) description = "Foggy conditions";
+        
             else if (weatherCode >= 51 && weatherCode <= 67) description = "Drizzle / Rain";
             else if (weatherCode >= 71) description = "Stormy weather";
 
