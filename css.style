@@ -13,7 +13,7 @@ body {
 
 /* Purple Header Background Layout */
 .main-header {
-    background-color: #6a1b9a; /* Deep vibrant purple match */
+    background-color: #6a1b9a;
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -58,7 +58,7 @@ body {
 
 /* Main Core Layout Container */
 .portfolio-container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 30px auto;
     padding: 0 20px;
     display: flex;
@@ -84,6 +84,16 @@ body {
     margin-bottom: 15px;
 }
 
+.inline-profile-img {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border-radius: 12px;
+    margin: 15px auto 20px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
 .contact-info p {
     color: #666;
     font-size: 0.95rem;
@@ -98,13 +108,12 @@ body {
 
 /* Dynamic Hidden Sections Setup Mechanical Rules */
 .tab-content {
-    display: none; /* Keep closed by default */
+    display: none;
     text-align: left;
     line-height: 1.7;
     animation: fadeIn 0.4s ease forwards;
 }
 
-/* Target display state for selected tabs */
 .tab-content.active-content {
     display: block; 
 }
@@ -114,15 +123,19 @@ body {
     margin-bottom: 15px;
     border-bottom: 2px solid #f5f0fa;
     padding-bottom: 8px;
+    font-size: 1.5rem;
 }
 
 /* List Formatting */
 .skills-list {
     list-style-position: inside;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.skills-list li { margin-bottom: 8px; }
+.skills-list li { 
+    margin-bottom: 8px; 
+    padding-left: 5px;
+}
 
 .experience-item, .education-item {
     margin-bottom: 20px;
@@ -130,17 +143,45 @@ body {
     border-bottom: 1px solid #f5f0fa;
 }
 
+.experience-item:last-child, .education-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 .exp-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    color: #333;
+    color: #222;
+    font-size: 1.1rem;
 }
 
 .company {
     font-style: italic;
-    color: #777;
-    margin: 4px 0;
+    color: #555;
+    margin: 4px 0 10px 0;
+    font-weight: 500;
+}
+
+.institution {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.edu-details {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+.experience-item ul {
+    padding-left: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 8px;
 }
 
 @keyframes fadeIn {
@@ -148,8 +189,8 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Adaptive Breakpoint Handling */
-@media (max-width: 600px) {
-    .exp-header { flex-direction: column; gap: 2px; }
+@media (max-width: 650px) {
+    .exp-header { flex-direction: column; gap: 4px; }
     .nav-btn { font-size: 0.95rem; padding: 6px 12px; }
+    .portfolio-container { margin: 15px auto; }
 }
