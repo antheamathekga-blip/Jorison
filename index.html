@@ -7,36 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Purple Main Header Component -->
+    <header class="main-header">
+        <h1>My Portfolio</h1>
+        <p class="subtitle">Matlou Anthea Mathekga</p>
+        
+        <!-- Navigation Tab Menu -->
+        <nav class="cv-nav">
+            <button class="nav-btn active" onclick="showTab(event, 'about')">About</button>
+            <button class="nav-btn" onclick="showTab(event, 'skills')">Skills</button>
+            <button class="nav-btn" onclick="showTab(event, 'experience')">Experience</button>
+            <button class="nav-btn" onclick="showTab(event, 'education')">Education</button>
+        </nav>
+    </header>
+
     <div class="portfolio-container">
-        <aside class="profile-column">
-            <div class="profile-card">
-                <img src="profile.jpg" alt="Matlou Anthea Mathekga" class="profile-img">
-                <h1>Matlou Anthea Mathekga</h1>
-                <p class="profile-title">IT Support & Administrative Professional</p>
-                <div class="contact-info">
-                    <p>📞 076 248 9604</p>
-                    <p>📧 antheamathekga@gmail.com</p>
-                    <p>🏠 Johannesburg South</p>
-                </div>
+        <!-- Profile & Contact Card Component -->
+        <div class="profile-card">
+            <img src="profile.jpg" alt="Matlou Anthea Mathekga" class="profile-img">
+            <div class="contact-info">
+                <p>📞 076 248 9604 | 📧 antheamathekga@gmail.com</p>
+                <p>🏠 Johannesburg South</p>
             </div>
-            <div class="weather-widget">
-                <h3>Current Weather</h3>
-                <p id="location">Detecting location...</p>
-                <p id="weather-desc">Fetching weather data...</p>
-                <p id="temperature"></p>
-            </div>
-        </aside>
-        <main class="content-column">
-            <nav class="cv-nav">
-                <button class="nav-btn active" onclick="showTab(event, 'about')">About</button>
-                <button class="nav-btn" onclick="showTab(event, 'skills')">Skills</button>
-                <button class="nav-btn" onclick="showTab(event, 'experience')">Experience</button>
-                <button class="nav-btn" onclick="showTab(event, 'education')">Education</button>
-            </nav>
+        </div>
+
+        <!-- Weather Tracking Component -->
+        <div class="weather-widget">
+            <h3>Current Weather</h3>
+            <p id="location">Loading location...</p>
+            <p id="weather-desc">Fetching weather data...</p>
+            <p id="temperature"></p>
+        </div>
+
+        <!-- Dynamic Content Card Panel -->
+        <main class="content-card">
+            <!-- About Section Panel -->
             <section id="about" class="tab-content active-content">
                 <h2>About Me</h2>
                 <p>Organised and adaptable candidate with experience in administration, data capturing, customer service, retail operations, project support and basic IT support. Skilled in MS Office, record keeping, stakeholder communication, device repairs, and assisting in project environments. Available immediately.</p>
             </section>
+
+            <!-- Skills Section Panel -->
             <section id="skills" class="tab-content">
                 <h2>Core Skills</h2>
                 <ul class="skills-list">
@@ -47,12 +59,14 @@
                     <li>Social Media Management & POS Operations</li>
                     <li>Installations, Troubleshooting, & Networking</li>
                 </ul>
-                <h2 style="margin-top: 20px;">Certifications</h2>
+                <h3 style="margin-top: 20px; color: #6a1b9a;">Certifications</h3>
                 <ul class="skills-list">
                     <li>Microsoft Word, Excel, Access & PowerPoint</li>
                     <li>Microsoft Visual Basic for Excel (VBA Coding)</li>
                 </ul>
             </section>
+
+            <!-- Experience Section Panel -->
             <section id="experience" class="tab-content">
                 <h2>Work Experience</h2>
                 <div class="experience-item">
@@ -64,7 +78,7 @@
                     <ul>
                         <li>Captured data for drafts, designs and technical specifications.</li>
                         <li>Monitored project progress and assisted with reporting.</li>
-                        <li>Liaised with contractors and completed materials quality checks.</li>
+                        <li>Liaised with contractors and supervisors.</li>
                     </ul>
                 </div>
                 <div class="experience-item">
@@ -74,12 +88,13 @@
                     </div>
                     <p class="company">Fashion Faction (PTY) LTD ‒ Retail Start-up</p>
                     <ul>
-                        <li>Provided customer service, managed sales, and handled transactional point-of-sale operations.</li>
-                        <li>Performed admin tasks including record keeping, invoicing, quoting, and data updates.</li>
+                        <li>Provided customer service, managed sales, and handled point-of-sale operations.</li>
                         <li>Managed social media business pages and assisted with public promotions.</li>
                     </ul>
                 </div>
             </section>
+
+            <!-- Education Section Panel -->
             <section id="education" class="tab-content">
                 <h2>Education</h2>
                 <div class="education-item">
@@ -90,15 +105,10 @@
                     <h3>Process Plant Operations (Level 2‒3)</h3>
                     <p class="institution">Capricorn TVET College</p>
                 </div>
-                <h2 style="margin-top: 20px;">Work-Based Experience</h2>
-                <ul class="skills-list">
-                    <li><strong>IT Support WBE:</strong> Practical troubleshooting, device setup, and administrative IT tasks.</li>
-                    <li><strong>Contact Centre WBE:</strong> Professional communication, call handling, and query resolution.</li>
-                    <li><strong>Networking WBE:</strong> Basic networking, cabling, and connectivity setup and testing.</li>
-                </ul>
             </section>
         </main>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
