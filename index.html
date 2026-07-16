@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matlou Anthea Mathekga - Technology Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -15,17 +15,17 @@
         
         <!-- Navigation Tab Menu -->
         <nav class="cv-nav">
-            <button class="nav-btn active" onclick="showTab(event, 'about')">About</button>
-            <button class="nav-btn" onclick="showTab(event, 'skills')">Skills</button>
-            <button class="nav-btn" onclick="showTab(event, 'experience')">Experience</button>
-            <button class="nav-btn" onclick="showTab(event, 'education')">Education</button>
+            <button class="nav-btn" onclick="showTab(event, 'about')">About Me</button>
+            <button class="nav-btn" onclick="showTab(event, 'skills')">Technical Skills</button>
+            <button class="nav-btn" onclick="showTab(event, 'experience')">Work Experience</button>
+            <button class="nav-btn" onclick="showTab(event, 'education')">Education & Training</button>
         </nav>
     </header>
 
     <div class="portfolio-container">
         <!-- Profile & Contact Card Component -->
         <div class="profile-card">
-            <img src="profile1.jpg" alt="Matlou Anthea Mathekga Headshot" class="profile-img">
+            <img src="./profile1.jpg" alt="Matlou Anthea Mathekga Headshot" class="profile-img">
             <div class="contact-info">
                 <p>📞 076 248 9604 | 📧 antheamathekga@gmail.com</p>
                 <p>🏠 Johannesburg South</p>
@@ -35,17 +35,18 @@
         <!-- Weather Tracking Component -->
         <div class="weather-widget">
             <h3>Current Weather</h3>
-            <p id="location">Loading location...</p>
-            <p id="weather-desc">Fetching weather data...</p>
+            <p id="location">Detecting location...</p>
+            <p id="weather-desc">Loading tracking systems...</p>
             <p id="temperature"></p>
         </div>
 
-        <!-- Dynamic Content Card Panel -->
-        <main class="content-card">
+        <!-- Dynamic Content Card Panel (Starts completely closed) -->
+        <main id="contentBox" class="content-card">
+            
             <!-- About Section Panel -->
-            <section id="about" class="tab-content active-content">
+            <section id="about" class="tab-content">
                 <h2>About Me</h2>
-                <img src="profile2.jpg" alt="Matlou Anthea Mathekga Feature" class="inline-profile-img">
+                <img src="./profile2.jpg" alt="Matlou Anthea Mathekga Feature" class="inline-profile-img">
                 <p>I am an ambitious, technical, and results-driven professional holding a Diploma in Information Technology, specializing in Java Development and Data Analysis. Combining software development principles with advanced analytical engineering, I excel at building highly scalable backend architectures using Java and Spring frameworks while extracting actionable business intelligence from complex technical datasets. I leverage strong programming methodologies, modern data-modeling practices, and administrative systems to streamline operational workflows and support mission-critical enterprise environments. I am highly adaptable, mathematically minded, and immediately available to contribute technical excellence to engineering and analytical operations.</p>
             </section>
 
@@ -136,6 +137,7 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
-</html>
+    </html>
+    
